@@ -29,9 +29,9 @@ with the WCK renderer.
 """
 
 # pointer to freetype build directory (tweak as necessary)
-FREETYPE_ROOT = "/usr/local"
+FREETYPE_ROOT = None
 
-if not os.path.isdir(FREETYPE_ROOT):
+if FREETYPE_ROOT and not os.path.isdir(FREETYPE_ROOT):
     print "===", "freetype not available (edit setup.py to enable)"
     FREETYPE_ROOT = None
 
